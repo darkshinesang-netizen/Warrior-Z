@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    overflow: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes idleBreathe {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.015);
+  }
+}
+
+@keyframes auraPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.97);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes tickerSlide {
+  0% {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  12%, 88% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.animate-idle-breathe {
+  animation: idleBreathe 3.4s ease-in-out infinite;
+}
+
+.animate-aura-pulse {
+  animation: auraPulse 2.8s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-idle-breathe,
+  .animate-aura-pulse,
+  .animate-float-gentle {
+    animation: none !important;
+  }
+}
+
+/* Custom thin RPG scrollbar for internal drawers/modals */
+.rpg-scroll::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.rpg-scroll::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.rpg-scroll::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.45);
+  border-radius: 9999px;
+}

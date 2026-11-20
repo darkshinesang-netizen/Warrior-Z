@@ -1,0 +1,8 @@
+{
+  "name": "Dragon Spirit Chronicles",
+  "description": "Vertical 9:16 mobile anime idle turn-based gacha RPG featuring martial-arts heroes, squad progression, and interactive sanctuary HUD.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
